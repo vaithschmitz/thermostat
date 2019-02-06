@@ -13,7 +13,11 @@ class Thermostat {
 	}
 
 	tempDown(){
-		this.temperature -= 1
+		if (this.temperature > 10){
+		this.temperature -= 1}
+		else {
+			throw new Error("10 degrees is frosty enough, bruh!")
+		}
 	}
 };
 

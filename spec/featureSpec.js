@@ -18,4 +18,10 @@ describe("Features", () => {
   	thermostat.tempDown()
   	expect(thermostat.getTemp()).toBe(19)
   })
+
+  it("temperature can't be decreased below 10", ()=>{
+    thermostat.temperature = 10
+    expect(() => {
+    	thermostat.tempDown()}).toThrow(new Error("10 degrees is frosty enough, bruh!"))
+  });
 });

@@ -1,12 +1,16 @@
 describe("Features", () => {
-	let thermostat; 
+  let thermostat;
 
-	thermostat = new Thermostat();
+  beforeEach(()=>{
+  thermostat = new Thermostat();
+  });
 
-	it("should start at 20 degrees", () => {
-		expect (thermostat.getTemp()).toBe(20)
-	})
+  it("should start at 20 degrees", () => {
+    expect(thermostat.getTemp()).toBe(20)
+  })
 
+  it("can be increased", () => {
+  	thermostat.tempUp()
+  	expect(thermostat.getTemp()).toBe(21)
+  })
 });
-
-

@@ -41,6 +41,12 @@ describe("Features", () => {
 
   it("'power saving' is on by default", () => {
   	expect(thermostat.getMode()).toBe('Power Saving Mode') 
+  });
+
+  it("'reset' will reset temp to 20 degrees", () => {
+  	thermostat.temperature = 26 
+  	thermostat.reset()
+  	expect(thermostat.getTemp()).toBe(20)
   })
 
 });

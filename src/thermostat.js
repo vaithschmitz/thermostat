@@ -17,7 +17,7 @@ class Thermostat {
 			return "Regular Mode"
 		}
 	}
-	
+
 	tempUp() {
 		if (this.powerSaving == true && this.temperature === 25){
 			throw new Error("Max Temp On Power Saving Mode = 25 Degrees")
@@ -37,6 +37,11 @@ class Thermostat {
 			throw new Error("10 degrees is frosty enough, bruh!")
 		}
 	}
+
+	reset() {
+		this.temperature = 20;
+	}
+	
 };
 
 

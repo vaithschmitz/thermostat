@@ -2,6 +2,7 @@ class Thermostat {
 
 	constructor(temperature) {
 		this.temperature = 20;
+		this.powerSaving = true;
 	}
 
 	getTemp() {
@@ -9,7 +10,12 @@ class Thermostat {
 	}
 
 	tempUp() {
+		if (this.powerSaving == true && this.temperature === 25){
+			throw new Error("Max Temp On Power Saving Mode = 25 Degrees")
+		}
+		else{
 		this.temperature  += 1 
+		}
 	}
 
 	tempDown(){

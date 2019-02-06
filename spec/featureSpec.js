@@ -24,4 +24,11 @@ describe("Features", () => {
     expect(() => {
     	thermostat.tempDown()}).toThrow(new Error("10 degrees is frosty enough, bruh!"))
   });
+
+  it("on 'power saving' temperature can't be increased past 25 degrees", () => {
+  	thermostat.powerSaving = true
+  	thermostat.temperature = 25
+  	expect(() => {
+  		thermostat.tempUp()}).toThrow(new Error("Max Temp On Power Saving Mode = 25 Degrees"))
+  });
 });

@@ -9,6 +9,15 @@ class Thermostat {
 		return this.temperature;
 	}
 
+	getMode() {
+		if (this.powerSaving === true){
+			return "Power Saving Mode"
+		}
+		else {
+			return "Regular Mode"
+		}
+	}
+	
 	tempUp() {
 		if (this.powerSaving == true && this.temperature === 25){
 			throw new Error("Max Temp On Power Saving Mode = 25 Degrees")

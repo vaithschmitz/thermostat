@@ -36,7 +36,11 @@ describe("Features", () => {
   	thermostat.powerSaving = false
   	thermostat.temperature = 32
   	expect(() => {
-  		thermostat.tempUp()}).toThrow(new Error("Max Temp = 25 Degrees"))
+  		thermostat.tempUp()}).toThrow(new Error("Max Temp = 32 Degrees"))
   });
+
+  it("'power saving' is on by default", () => {
+  	expect(thermostat.getMode()).toBe('Power Saving Mode') 
+  })
 
 });

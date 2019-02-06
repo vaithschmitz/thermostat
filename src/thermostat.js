@@ -13,6 +13,9 @@ class Thermostat {
 		if (this.powerSaving == true && this.temperature === 25){
 			throw new Error("Max Temp On Power Saving Mode = 25 Degrees")
 		}
+		else if (this.powerSaving == false && this.temperature === 32){
+			throw new Error("Max Temp = 32 Degrees")
+		}
 		else{
 		this.temperature  += 1 
 		}

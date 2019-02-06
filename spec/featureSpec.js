@@ -31,4 +31,12 @@ describe("Features", () => {
   	expect(() => {
   		thermostat.tempUp()}).toThrow(new Error("Max Temp On Power Saving Mode = 25 Degrees"))
   });
+
+  it("on 'regular mode' temperature can't be increased past 32 degrees", () => {
+  	thermostat.powerSaving = false
+  	thermostat.temperature = 32
+  	expect(() => {
+  		thermostat.tempUp()}).toThrow(new Error("Max Temp = 25 Degrees"))
+  });
+
 });

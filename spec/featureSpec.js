@@ -9,8 +9,13 @@ describe("Features", () => {
     expect(thermostat.getTemp()).toBe(20)
   })
 
-  it("can be increased", () => {
+  it("temperature can be increased", () => {
   	thermostat.tempUp()
   	expect(thermostat.getTemp()).toBe(21)
+  })
+
+  it("temperature can be decreased", () => {
+  	thermostat.tempDown()
+  	expect(thermostat.getTemp()).toBe(19)
   })
 });

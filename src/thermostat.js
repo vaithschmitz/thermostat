@@ -12,6 +12,9 @@ class Thermostat {
 		this.temperature  += 1 
 	}
 
+	tempDown(){
+		this.temperature -= 1
+	}
 };
 
 

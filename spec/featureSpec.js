@@ -49,4 +49,19 @@ describe("Features", () => {
   	expect(thermostat.getTemp()).toBe(20)
   })
 
+  it("reports low energy usage data", () => {
+  	thermostat.temperature = 17 
+  	expect(thermostat.getEnergy()).toBe('low-usage')
+  })
+ 
+  it("reports medium energy usage data", () => {
+		thermostat.temperature = 24 
+  	expect(thermostat.getEnergy()).toBe('medium-usage')
+  })
+
+  it("reports high energy usage data", () => {
+		thermostat.temperature = 25 
+  	expect(thermostat.getEnergy()).toBe('high-usage')
+  })
+
 });

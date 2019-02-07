@@ -40,7 +40,7 @@ describe("Features", () => {
   });
 
   it("'power saving' is on by default", () => {
-  	expect(thermostat.getMode()).toBe('Power Saving Mode') 
+  	expect(thermostat.getMode()).toBe('Power Saving Enabled') 
   });
 
   it("'reset' will reset temp to 20 degrees", () => {
@@ -51,17 +51,17 @@ describe("Features", () => {
 
   it("reports low energy usage data", () => {
   	thermostat.temperature = 17 
-  	expect(thermostat.getEnergy()).toBe('low-usage')
+  	expect(thermostat.getEnergy()).toBe('Energy Usage: Low')
   })
  
   it("reports medium energy usage data", () => {
 		thermostat.temperature = 24 
-  	expect(thermostat.getEnergy()).toBe('medium-usage')
+  	expect(thermostat.getEnergy()).toBe('Energy Usage: Medium')
   })
 
   it("reports high energy usage data", () => {
 		thermostat.temperature = 25 
-  	expect(thermostat.getEnergy()).toBe('high-usage')
+  	expect(thermostat.getEnergy()).toBe('Energy Usage: High')
   })
 
 });

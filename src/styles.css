@@ -1,0 +1,67 @@
+body {
+	font-family: Futura ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+	border-radius: 10%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "dspl dspl dspl ." "down save up ." ". . . .";
+}
+
+.down { grid-area: down; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.save { grid-area: save; 
+	display: flex;
+	flex-direction: column;
+
+}
+
+.up { grid-area: up; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dspl { grid-area: dspl; 
+  display: inline-block;
+}
+
+#temperature {
+	text-align: center;
+}
+
+.pwrsvon {
+	opacity: 1;
+	background-color:#89c403;
+	cursor: pointer;
+	color: white;
+	font-weight:bold;
+	border-radius:6px;
+	border:1px solid #89c403;
+}
+
+.pwrsvoff {
+	opacity: 0.3;
+	background-color: transparent;
+	cursor: pointer;
+	color: #89c403;
+	font-weight: bold; 
+	border-radius:6px;
+	border:1px solid #89c403;
+}
+
+

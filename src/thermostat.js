@@ -11,10 +11,19 @@ class Thermostat {
 
 	getMode() {
 		if (this.powerSaving === true){
-			return "Power Saving Mode"
+			return "Power Saving Enabled"
 		}
 		else {
-			return "Regular Mode"
+			return "Power Saving Disabled"
+		}
+	}
+
+	toggleMode() {
+		if (this.powerSaving === true){
+			this.powerSaving = false
+		}
+		else{
+			this.powerSaving = true
 		}
 	}
 
@@ -44,16 +53,14 @@ class Thermostat {
 
 	getEnergy() {
 		if (this.temperature < 18){
-			return "low-usage"
+			return "Energy Usage: Low"
 		}
-		else if (this.temperature < 25){
-			return "medium-usage"
+		else if (this.temperature <= 25){
+			return "Energy Usage: Medium"
 		}
 		else {
-			return "high-usage"
+			return "Energy Usage: High"
 		}
 	}
 };
-
-
 

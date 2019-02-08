@@ -6,17 +6,17 @@ function currentStats() {
   $('temperature').textContent = (thermostat.temperature);
   $('nrg-usg').textContent = (thermostat.getEnergy());
   if (thermostat.temperature <= 17) {
-    $('nrg-usg').style.color = 'green';
+    $('nrg-usg').style.color = '#21FE06FF';
   } else if (thermostat.temperature <= 25) {
-    $('nrg-usg').style.color = 'orange';
+    $('nrg-usg').style.color = '#FDC32BFF';
   } else {
-    $('nrg-usg').style.color = 'red';
+    $('nrg-usg').style.color = '#FB0006FF';
   }
 }
 
 currentStats();
 
-$('temp-up').addEventListener('click', () => {
+$('btn-up').addEventListener('click', () => {
   if (thermostat.temperature >= 25 && thermostat.powerSaving === true) {
     alert("Disable Power Saving Mode to increase temperature.")
   } else if (thermostat.temperature >= 32 && thermostat.powerSaving === false) {
@@ -27,7 +27,8 @@ $('temp-up').addEventListener('click', () => {
   }
 })
 
-$('temp-down').addEventListener('click', () => {
+
+$('btn-down').addEventListener('click', () => {
   if (thermostat.temperature <= 10) {
     alert("That's cold enough. Wouldn't want you to catch a cold.")
   } else {
@@ -41,6 +42,7 @@ $('temp-reset').addEventListener('click', () => {
   currentStats();
 })
 
+
 $('pwrsv').addEventListener('click', () => {
   thermostat.toggleMode();
 
@@ -48,6 +50,7 @@ $('pwrsv').addEventListener('click', () => {
     $('pwrsv').className = 'pwrsvoff'
   } else {
     $('pwrsv').className = 'pwrsvon'
+    currentStats();
   }
   $('pwrsv').textContent = (thermostat.getMode());
 })

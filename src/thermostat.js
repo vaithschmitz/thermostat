@@ -23,7 +23,8 @@ class Thermostat {
 			this.powerSaving = false
 		}
 		else{
-			this.powerSaving = true
+			this.powerSaving = true;
+			this.temperature = 25;
 		}
 	}
 

@@ -1,0 +1,38 @@
+
+<svg width="254px" height="88px" viewBox="0 0 254 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#EEEEEE" offset="0%"></stop>
+            <stop stop-color="#B7B2B2" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-1.2%" y="-3.6%" width="102.4%" height="107.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.0%" y="-4.2%" width="124.0%" height="108.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.0%" y="-4.2%" width="124.0%" height="108.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.0%" y="-4.2%" width="124.0%" height="108.3%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.0%" y="-4.2%" width="124.0%" height="108.3%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-544.000000, -540.000000)">
+            <g id="battery_half_icn" transform="translate(546.000000, 542.000000)">
+                <path d="M8,-1.27418001e-14 L229,2.84217094e-14 C233.418278,2.76100849e-14 237,3.581722 237,8 L237,20.1927611 C245.533854,17.2831863 249.800781,17.2831863 249.800781,20.1927611 C249.800781,24.5571234 249.800781,53.171785 249.800781,62.1000862 C249.800781,65.876151 245.533854,66.9000806 237,65.171875 L237,76 C237,80.418278 233.418278,84 229,84 L8,84 C3.581722,84 -3.42430428e-14,80.418278 -4.26325641e-14,76 L-3.01980663e-14,8 C-3.07391493e-14,3.581722 3.581722,-1.33992302e-14 8,-1.42108547e-14 Z" id="Rectangle" fill="url(#linearGradient-1)" filter="url(#filter-2)"></path>
+                <rect id="Rectangle" fill="#00FF1D" filter="url(#filter-3)" x="12" y="6" width="25" height="72" rx="7"></rect>
+                <rect id="Rectangle-Copy" fill="#00FF1D" filter="url(#filter-4)" x="44" y="6" width="25" height="72" rx="7"></rect>
+                <rect id="Rectangle-Copy-2" fill="#00FF1D" filter="url(#filter-5)" x="76" y="6" width="25" height="72" rx="7"></rect>
+                <rect id="Rectangle-Copy-3" fill="#00FF1D" filter="url(#filter-6)" x="108" y="6" width="25" height="72" rx="7"></rect>
+            </g>
+            <text id="Power-Save-Disabled" font-family="Futura-Bold, Futura" font-size="20" font-weight="bold" fill="#000000">
+                <tspan x="560" y="592">Power Save Disabled</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

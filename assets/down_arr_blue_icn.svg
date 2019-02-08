@@ -1,0 +1,30 @@
+
+<svg width="327px" height="327px" viewBox="0 0 327 327" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#C6C6C6" offset="100%"></stop>
+        </radialGradient>
+        <filter x="-10.8%" y="-10.8%" width="121.7%" height="121.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#0018FF" offset="0%"></stop>
+            <stop stop-color="#E9CBCB" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-3037.7%" y="-11.9%" width="6125.3%" height="117.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-3037.7%" y="-11.9%" width="6125.3%" height="117.8%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Symbols-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="down_arr_blue" transform="translate(25.000000, 25.000000)">
+            <g>
+                <circle id="Oval" fill="url(#radialGradient-1)" filter="url(#filter-2)" cx="138.5" cy="138.5" r="138.5"></circle>
+                <path id="Line" d="M147,135 L147,230.5 L147,239 L130,239 L130,230.5 L130,135 L94,135 L138.5,46 L183,135 L147,135 Z" fill="url(#linearGradient-3)" fill-rule="nonzero" filter="url(#filter-5)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

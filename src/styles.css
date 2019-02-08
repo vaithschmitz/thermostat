@@ -23,7 +23,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "dspl dspl dspl .""down save up ."". . . .";
+  grid-template-areas: "topleft dspl topright .""down save up ."". . . .";
 }
 
 .down {
@@ -66,6 +66,14 @@ button {
 #nrg-usg {
   text-align: center;
   font-size: 1.5em;
+}
+
+#btn-weather{
+
+}
+
+#weather{
+	color: white;
 }
 
 #temp-down {

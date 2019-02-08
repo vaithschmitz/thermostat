@@ -38,13 +38,13 @@ class Thermostat {
 
 	getEnergy() {
 		if (this.temperature < 18){
-			return "Energy Usage: Low"
+			return "Energy Usage: \nLow"
 		}
 		else if (this.temperature <= 25){
-			return "Energy Usage: Medium"
+			return "Energy Usage: \nMedium"
 		}
 		else {
-			return "Energy Usage: High"
+			return "Energy Usage: \nHigh"
 		}
 	}
 };

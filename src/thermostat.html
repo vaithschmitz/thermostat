@@ -13,7 +13,7 @@
     </div>
     <div class="dspl">
       <h1 id="temperature"></h1>
-      <h1 id="nrg-usg"></h1>
+      
     </div>
     <div class="topright">
       <ul id="weather">
@@ -26,11 +26,13 @@
         <li id="wind"></li>
       </ul>
     </div>
-    <div class="down" class="slidect1">
+    <div class="down">
     	  <h3 id="limit-errors"></h3>
-      <input type="range" min="10" max="25" value="20" step="0.1" class="slider" id="myRange">
+      <input type="range" min="10" max="25" value="20" step="0.1" class="slider" class="pulse" id="myRange">
     </div>
     <div class="save">
+    	 <span class='nrg-wrapper'> <h1 id="nrg-usg"></h1></span>
+    	
       <div class="saveleft">
         <button id="pwrsv" class="pwrsvon">Power Saving Enabled</button>
         <button id="temp-reset">Reset Temperature</button>
@@ -41,7 +43,7 @@
       </div>
     </div>
     <div class="up">
-
+    	
     </div>
   </main>
   <script type="text/javascript" src="thermostat.js"></script>

@@ -49,11 +49,10 @@ button {
   align-items: center;
 }
 
+
+
 .save {
   grid-area: save;
-  display: table;
-  height: 100%;
-  width: 100%;
 }
 
 .saveleft {
@@ -88,8 +87,15 @@ button {
 /*Changing individual designs*/
 
 #temperature {
-  font-size: 5em;
+  font-size: 8em;
   text-align: center;
+}
+
+.nrg-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* float: right; */
 }
 
 #nrg-usg {
@@ -111,10 +117,52 @@ button {
   width: 25em;
   height: 3em;
   border-radius: 5px;
-  background: #d3d3d3;
+  background-image: radial-gradient(grey, blue, red, blue, grey);
   transform: rotate(270deg);
   outline: none;
   opacity: 0.7;
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: radial-gradient(grey, blue, red, blue, grey);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background-image: radial-gradient(grey, blue, red, blue, grey);
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+#myRange {
+	color: purple;
+	filter: drop-shadow(6em 3em);
+	filter: hue-rotate(45deg);
+	box-shadow: 1em 1em 11.5em 0.55em blue;
+}
+
+#myRange.pulse {
+  animation:slideGlow 10s linear;
+}
+
+@keyframes slideGlow {
+	from {
+		filter: hue-rotate(0deg);
+		box-shadow: 1em 1em 11.5em 0.55em blue;
+	}
+	to {
+		filter: hue-rotate(360deg);
+		box-shadow: 1em 1em 11.5em 0.55em purple;
+	}
 }
 
 #temp-down {
@@ -134,6 +182,7 @@ button {
 .pwrsvon {
   background-color: #89c403;
   color: white;
+  opacity: 0.8;
   border: 1px solid #89c403;
   box-shadow: 0 0 1.5em 0.15em #89c403;
 }
@@ -141,26 +190,29 @@ button {
 .pwrsvoff {
   background-color: transparent;
   color: #89c403;
-  box-shadow: inset 0.1em -0.1em 0.5em 0.35em #89c403;
+  box-shadow: 0 0 1.5em 0.15em #89c403;
+  border: none;
+  /* box-shadow: inset 0.1em -0.1em 0.5em 0.35em #89c403; */
 }
 
 #temp-reset {
   position: relative;
   top: 1em;
+  opacity: 0.8;
   padding: 2.5vh;
   width: 15vw;
-  background-color: #FB0106;
+  background-color: transparent;
   cursor: pointer;
-  color: white;
+  color: grey;
   font-weight: bold;
   border: none;
-  box-shadow: 0 0 1.5em 0.15em #FB0106;
+  box-shadow: 0 0 1.5em 0.15em grey;
 }
 
 #user-loc {
   display: inline-block;
   background-color: transparent;
-  color: white;
+  color: grey;
   padding: 2.5vh;
   width: 15vw;
   cursor: pointer;
@@ -168,13 +220,14 @@ button {
   text-align: center;
   border: none;
   border-radius: 10%;
-  box-shadow: 0 0 1.5em 0.15em blue;
+  box-shadow: 0 0 1.5em 0.15em grey;
 }
 
 #btn-weather {
   display: inline-block;
   visibility: hidden;
-  color: white;
+  color: grey;
+  opacity: 0.7;
   font-weight: bold;
   position: relative;
   top: 1em;
@@ -183,5 +236,22 @@ button {
   background-color: transparent;
   cursor: pointer;
   border: none;
-  box-shadow: 0 0 1.5em 0.15em blue;
+  border-radius: 10%;
+  box-shadow: 0 0 1.5em 0.15em grey;
+}
+
+
+#btn-weather.animated,
+#user-loc.animated {
+  animation: glowFade 10s linear;
+}
+
+
+@keyframes glowFade {
+	from {
+		box-shadow: 0 0 1.5em 0.15em grey;
+	}
+	to {
+		box-shadow : 0 0 1.5em 0.35em #75C7FEFF;
+	}
 }

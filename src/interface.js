@@ -51,7 +51,7 @@ function showSlider(){
 
 function hideSlider() {
   $('myRange').style.visibility = 'hidden';
-  setTimeout(showSlider, 1500)
+  setTimeout(showSlider, 1200)
 }
 
 currentStats();
@@ -62,15 +62,22 @@ document.addEventListener('DOMContentLoaded', () => {
   $('user-loc').value = ''
 })
 
+
+
 $('user-loc').addEventListener('input', () => {
   if ($('user-loc').value.length < 3) {
     $('btn-weather').disabled = true;
     $('btn-weather').style.visibility = 'hidden';
+    $("user-loc").removeClass('animated');
+    $("btn-weather").removeClass('animated');
   } else {
     $('btn-weather').disabled = false;
     $('btn-weather').style.visibility = 'visible';
+    $("user-loc").addClass('animated');
+    $("btn-weather").addClass('animated');
   }
 })
+
 
 $('btn-weather').addEventListener('click', () => {
   populateWeather();
@@ -78,27 +85,28 @@ $('btn-weather').addEventListener('click', () => {
 
 $('myRange').addEventListener('input', () => {
   let val = $('myRange').value
+  
   if (thermostat.temperature <= 10) {
     hideSlider()
     $('limit-errors').textContent = "Minimum Temperature."
     currentStats();
     $('myRange').min = '10';
     thermostat.changeTemp(val)
-    setTimeout(clearError, 1500)
+    setTimeout(clearError, 1200)
   } else if (thermostat.temperature >= 25 && thermostat.powerSaving === true) {
+    $('myRange').value = '20';
     hideSlider()
     $('limit-errors').textContent = "Disable Power Saving Mode to increase temperature."
     currentStats();
-    $('myRange').max = '25';
     thermostat.changeTemp(val)
-    setTimeout(clearError, 1500)
+    setTimeout(clearError, 1200)
   } else if (thermostat.temperature >= 32 && thermostat.powerSaving === false) {
     hideSlider()
     $('limit-errors').textContent = "Maximum Temperature."
     currentStats();
     $('myRange').max = '32';
     thermostat.changeTemp(val)
-    setTimeout(clearError, 1500)
+    setTimeout(clearError, 1200)
   } else {
     thermostat.changeTemp(val)
     currentStats();
@@ -119,8 +127,8 @@ $('pwrsv').addEventListener('click', () => {
     $('myRange').max = '32';
   } else {
     $('pwrsv').className = 'pwrsvon'
-    thermostat.temperature = 25;
-    $('myRange').value = 25
+    thermostat.temperature = 20;
+    $('myRange').value = 20
     currentStats();
   }
   $('pwrsv').textContent = (thermostat.getMode());

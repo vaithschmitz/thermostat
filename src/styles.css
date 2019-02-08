@@ -92,6 +92,7 @@ button {
 
 #weather{
 	color: white;
+	list-style: none;
 }
 
 #temp-down {

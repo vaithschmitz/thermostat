@@ -14,7 +14,34 @@ function currentStats() {
   }
 }
 
+function populateWeather() {
+  place = $('user-loc').value;
+  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&appid=68d94d5bb085aaebdda7654eb41e9176`)
+
+  .then(function(response) {
+    return(response.json());
+  })
+  .then(function(myJson) {
+    data = myJson;
+
+    $('city').textContent = data.name
+    $('curtemp').textContent = `${Math.round(data.main.temp)}°C`
+    $('weathdescrip').textContent = data.weather[0].description
+    $('mintemp').textContent = `min: ${Math.round(data.main.temp_min)}°C`
+    $('maxtemp').textContent = `max: ${Math.round(data.main.temp_max)}°C`
+    $('humidity').textContent = `humidity: ${data.main.humidity}%`
+    $('wind').textContent = `wind: ${data.wind.speed} km/h`
+  }); 
+}
+
 currentStats();
+
+
+document.addEventListener('DOMContentLoaded', () =>{
+  $('user-loc').value = 'London';
+  populateWeather();
+  $('user-loc').value = ''
+})
 
 
 $('user-loc').addEventListener('input', function success() {
@@ -28,20 +55,8 @@ $('user-loc').addEventListener('input', function success() {
 })
 
 
-
-$('btn-weather').addEventListener('click', function getWeather(){
-  let place = $('user-loc').value;
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&appid=68d94d5bb085aaebdda7654eb41e9176`)
-
-  .then(function(response) {
-    return(response.json());
-  })
-  .then(function(myJson) {
-    let city = myJson.name;
-    let currentTemp = Math.round(myJson.main.temp);
-    let weatherDescrip = myJson.weather[0].description;
-    $('weather').textContent = (`In ${city}, it currently is ${currentTemp} degrees with ${weatherDescrip}.`)
-  }); 
+$('btn-weather').addEventListener('click', () => {
+  populateWeather();
 });
 
 $('btn-up').addEventListener('click', () => {

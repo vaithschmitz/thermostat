@@ -14,17 +14,22 @@
   		<h1 id="temperature"></h1>
   		<h1 id="nrg-usg"></h1>
 		</div>
-		<div class="topright">
-			<input id="user-loc" type="text" placeholder="Enter Your City"></input>
-			<input id="btn-weather" type="submit" disabled> GET WEATHER</input> 
+		<div class="topright">  
 			<div id="weather"> </div>
+	
 		</div>
 		<div class="down">
 			<button id="temp-down"><img id="btn-down" src="../assets/down_arr_blue_icn.svg" /></button>
 		</div>
 		<div class="save">
-			<button id="pwrsv" class="pwrsvon">Power Saving Enabled</button>
-			<button id="temp-reset">Reset Temperature</button>
+			<div class="saveleft">
+				<button id="pwrsv" class="pwrsvon">Power Saving Enabled</button>
+				<button id="temp-reset">Reset Temperature</button>
+			</div>
+			<div class="saveright">
+				<input id="user-loc" type="text" placeholder="Enter Your City"></input>
+				<input id="btn-weather" type="submit" value="GET WEATHER" disabled></input> 
+			</div>
 		</div>
     <div class="up">
     	<button id="temp-up"><img id="btn-up" src="../assets/up_arr_red_icn.svg" /></button>

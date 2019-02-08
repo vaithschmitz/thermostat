@@ -33,16 +33,36 @@ button {
   justify-content: center;
 }
 
-
-.save {
-  grid-area: save;
-  display: flex;
+.topright{
+	display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.save {
+  grid-area: save;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
 
+.saveleft{
+	display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+  padding: 1rem;
+}
+
+.saveright{
+	  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+  padding: 1rem;
+
+}
 
 .up {
   grid-area: up;
@@ -68,9 +88,7 @@ button {
   font-size: 1.5em;
 }
 
-#btn-weather{
-	
-}
+
 
 #weather{
 	color: white;
@@ -80,7 +98,6 @@ button {
   background-color: black;
   transform: rotate(180deg);
   border: none;
-
 }
 
 #btn-down {
@@ -124,6 +141,35 @@ button {
   font-weight: bold;
   border: none;
   box-shadow: 0 0 1.5em 0.15em #FB0106;
+}
+
+#user-loc{
+	display: inline-block;
+	background-color: transparent;
+	color: white;
+  padding: 2.5vh;
+  width: 15vw;
+  cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 10%;
+	box-shadow: 0 0 1.5em 0.15em blue;
+}
+
+#btn-weather{
+  display: inline-block;
+  visibility: hidden;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  top: 1em;
+  padding: 2.5vh;
+  width: 15vw;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 1.5em 0.15em blue;
 }
 
 #temp-up {

@@ -26,15 +26,24 @@ button {
   grid-template-areas: "topleft dspl topright .""down save up ."". . . .";
 }
 
-.down {
-  grid-area: down;
-  display: flex;
-  align-items: center;
+#slidect {
+  display: inline-block;
   justify-content: center;
+  float: left;
+  vertical-align: middle;
 }
 
-.topright{
-	display: flex;
+.down {
+  grid-area: down;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding: 2.5vh 2.5vw;
+
+}
+
+.topright {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -47,16 +56,16 @@ button {
   width: 100%;
 }
 
-.saveleft{
-	display: table-cell;
+.saveleft {
+  display: table-cell;
   text-align: center;
   vertical-align: middle;
   width: 50%;
   padding: 1rem;
 }
 
-.saveright{
-	  display: table-cell;
+.saveright {
+  display: table-cell;
   text-align: center;
   vertical-align: middle;
   width: 50%;
@@ -88,23 +97,30 @@ button {
   font-size: 1.5em;
 }
 
+#limit-errors {
+  display: block;
+  text-align: center;
+}
 
+#weather {
+  color: white;
+  list-style: none;
+}
 
-#weather{
-	color: white;
-	list-style: none;
+.slider {
+  width: 25em;
+  height: 3em;
+  border-radius: 5px;
+  background: #d3d3d3;
+  transform: rotate(270deg);
+  outline: none;
+  opacity: 0.7;
 }
 
 #temp-down {
   background-color: black;
   transform: rotate(180deg);
   border: none;
-}
-
-#btn-down {
-  width: 30%;
-  height: auto;
-  cursor: pointer;
 }
 
 #pwrsv {
@@ -117,7 +133,6 @@ button {
 
 .pwrsvon {
   background-color: #89c403;
-  opacity: 0.8;
   color: white;
   border: 1px solid #89c403;
   box-shadow: 0 0 1.5em 0.15em #89c403;
@@ -125,13 +140,11 @@ button {
 
 .pwrsvoff {
   background-color: transparent;
-  opacity: 0.5;
   color: #89c403;
   box-shadow: inset 0.1em -0.1em 0.5em 0.35em #89c403;
 }
 
 #temp-reset {
-  opacity: 0.6;
   position: relative;
   top: 1em;
   padding: 2.5vh;
@@ -144,21 +157,21 @@ button {
   box-shadow: 0 0 1.5em 0.15em #FB0106;
 }
 
-#user-loc{
-	display: inline-block;
-	background-color: transparent;
-	color: white;
+#user-loc {
+  display: inline-block;
+  background-color: transparent;
+  color: white;
   padding: 2.5vh;
   width: 15vw;
   cursor: pointer;
-	font-weight: bold;
-	text-align: center;
-	border: none;
-	border-radius: 10%;
-	box-shadow: 0 0 1.5em 0.15em blue;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 0 1.5em 0.15em blue;
 }
 
-#btn-weather{
+#btn-weather {
   display: inline-block;
   visibility: hidden;
   color: white;
@@ -171,15 +184,4 @@ button {
   cursor: pointer;
   border: none;
   box-shadow: 0 0 1.5em 0.15em blue;
-}
-
-#temp-up {
-  background-color: black;
-  border: none;
-}
-
-#btn-up {
-  width: 30%;
-  height: auto;
-  cursor: pointer;
 }

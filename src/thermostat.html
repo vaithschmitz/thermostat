@@ -9,40 +9,41 @@
 
 <body>
   <main class="grid-container">
-  	<div class="topleft"></div>
-  	<div class="dspl">
-  		<h1 id="temperature"></h1>
-  		<h1 id="nrg-usg"></h1>
-		</div>
-		<div class="topright">  
-			<ul id="weather">
-				<li id="city"></li>
-				<li id="curtemp"></li>
-				<li id="weathdescrip"></li>
-			 	<li id="mintemp"></li>
-			 	<li id="maxtemp"></li>
-			 	<li id="humidity"></li>
-			 	<li id="wind"></li>
-			 </ul>
-		</div>
-		<div class="down">
-			<button id="temp-down"><img id="btn-down" src="../assets/down_arr_blue_icn.svg" /></button>
-		</div>
-		<div class="save">
-			<div class="saveleft">
-				<button id="pwrsv" class="pwrsvon">Power Saving Enabled</button>
-				<button id="temp-reset">Reset Temperature</button>
-			</div>
-			<div class="saveright">
-				<input id="user-loc" type="text" placeholder="Enter Your City"></input>
-				<input id="btn-weather" type="submit" value="GET WEATHER" disabled></input> 
-			</div>
-		</div>
+    <div class="topleft" class="slidect1"><h1 id="test"></h1>
+    </div>
+    <div class="dspl">
+      <h1 id="temperature"></h1>
+      <h1 id="nrg-usg"></h1>
+    </div>
+    <div class="topright">
+      <ul id="weather">
+        <li id="city"></li>
+        <li id="curtemp"></li>
+        <li id="weathdescrip"></li>
+        <li id="mintemp"></li>
+        <li id="maxtemp"></li>
+        <li id="humidity"></li>
+        <li id="wind"></li>
+      </ul>
+    </div>
+    <div class="down" class="slidect1">
+    	  <h3 id="limit-errors"></h3>
+      <input type="range" min="10" max="25" value="20" step="0.1" class="slider" id="myRange">
+    </div>
+    <div class="save">
+      <div class="saveleft">
+        <button id="pwrsv" class="pwrsvon">Power Saving Enabled</button>
+        <button id="temp-reset">Reset Temperature</button>
+      </div>
+      <div class="saveright">
+        <input id="user-loc" type="text" placeholder="Enter Your City"></input>
+        <input id="btn-weather" type="submit" value="GET WEATHER" disabled></input>
+      </div>
+    </div>
     <div class="up">
-    	<button id="temp-up"><img id="btn-up" src="../assets/up_arr_red_icn.svg" /></button>
-    </div> 
-  </main>
 
+    </div>
+  </main>
   <script type="text/javascript" src="thermostat.js"></script>
   <script type="text/javascript" src="interface.js"></script>
   <script>
@@ -51,4 +52,3 @@
 </body>
 
 </html>
-
